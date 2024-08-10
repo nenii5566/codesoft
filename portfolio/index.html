@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cd09c113e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Nancy Senjaliya</span> <br> From India</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-------about-------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.jpg" alt="User Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-paragraph"> I am a dedicated and innovative web developer with a passion for creating dynamic, user-friendly websites and applications. With a solid foundation in HTML, CSS, and JavaScript, I have honed my skills in front-end development, creating visually appealing and responsive designs that provide an excellent user experience. </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contains active-tab" id="skills">
+                        <ul>
+                            <li><span>WEB DEVELOPER</span><br> Designing web interfaces</li>
+                            <li><span>UI/UX</span><br> Designing app interfaces</li>
+                            <li><span>APP DEVELOPER</span><br> Building Android apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contains" id="education">
+                        <ul>
+                            <li><span>2024 - Current</span><br> Computer Engineering</li>
+                            <li><span>2021-2022</span><br> 12th Science at Ashadeep IIT</li>
+                            <li><span>2020</span><br> Completed 10th class with minor computer subject</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----services------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I create dynamic and responsive websites using the latest web technologies.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I create dynamic and responsive websites using the latest web technologies.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>I create dynamic and responsive websites using the latest web technologies.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----portfolio---------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.png" alt="Work 1">
+                    <div class="layer">
+                        <h3>Social Media</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from the play store.</p>
+                        <a href="#"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-2.png" alt="Work 2">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from the play store.</p>
+                        <a href="#"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-3.png" alt="Work 3">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from the play store.</p>
+                        <a href="#"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contains");
+
+        function openTab(tabName) {
+            for (var tabLink of tabLinks) {
+                tabLink.classList.remove("active-links");
+            }
+            for (var tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
